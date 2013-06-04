@@ -1,0 +1,21 @@
+<div align="center">
+	<br />
+	<br />
+	<h1>Gamified Cleaning</h1>
+	<h6>To begin you'll need an account</h6>
+	</br>
+	<a class="btn btn-info btn-large" href="/users/sign_up">Sign up</a>
+
+	<a class="btn btn-info btn-large" href="/users/sign_in">Sign in</a>
+	<br />
+	<br />
+	<% if user_signed_in? %>
+		<p>You are currently signed in..</p>
+		<a class="btn btn-danger" href="/users/sign_out">Log out</a>
+	<% else %>
+		<br />
+		<br />
+ <small>It's important to create an account because that is how you are able to communicate with us. You can't easily create an account by clicking "New Patient" above.</small>
+<% end %>
+
+</div>
