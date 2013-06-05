@@ -1,12 +1,11 @@
 <body bgcolor="#2980b9">
 <h2>Sign in</h2>
-<br />
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
+  <div><br />
+  <%= f.email_field :email, :autofocus => true, :placeholder => "Email" %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <div><br />
+  <%= f.password_field :password, :placeholder => "Password" %></div>
 <br />
   <% if devise_mapping.rememberable? -%>
     <!--<div align="center">Remember me<%= f.check_box :remember_me %></div>-->

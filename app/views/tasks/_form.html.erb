@@ -12,24 +12,30 @@
     </div>
   <% end %>
 <h2>What have you just done?</h2>
+
 <br />
 
   <div class="field">
 
-    <%= f.text_field :taskcomplete %><%= f.submit class: "btn btn-info" %>
+    <%= f.text_field :taskcomplete, :placeholder => "What have you cleaned?" %><%= f.submit class: "btn btn-info" %>
   </div>
 <br />
 <div class="actions">
     <br />
+    <a class="btn btn-warning" href="#">Cleaned Kitchen</a>
+    <a class="btn btn-warning" href="#">Cleaned Bathroom</a>
+    <a class="btn btn-warning" href="#">Cleaned Living Room</a>
     <br />
-    <%= link_to 'List of completed tasks', tasks_path, class: "btn btn-info" %>
+    <br />
+    <br />
+    <%= link_to 'List of completed tasks', tasks_path, class: "btn btn-success" %>
   </div>
 <% end %>
 <br />
 <br />
   <% if user_signed_in? %>
     <p>You are currently logged in..</p>
-    <%= link_to :logout,  destroy_user_session_path, class: 'btn btn-info', method: :delete %>
+    <%= link_to :logout,  destroy_user_session_path, class: 'btn btn-danger', method: :delete %>
   <% else %>
     <br />
     <br />
