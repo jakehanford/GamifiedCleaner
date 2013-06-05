@@ -1,11 +1,13 @@
-<body bgcolor="#34495e">
+<body bgcolor="#2980b9">
 <h2 id="notice"><%= notice %></h2>
 
 <p>
-  <b>Taskcomplete:</b>
+  <h4>Thank you so much, The house loves you!</h4>
+  <br />You successfully 
   <%= @task.taskcomplete %>
 </p>
+<br />
 
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'Edit', edit_task_path(@task), class: 'btn btn-primary' %> 
+<%= link_to 'Back', tasks_path, class: 'btn btn-primary' %>

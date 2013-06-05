@@ -1,4 +1,4 @@
-<body bgcolor="#34495e">
+<body bgcolor="#2980b9">
   <%= form_for(@task) do |f| %>
   <% if @task.errors.any? %>
     <div id="error_explanation">
@@ -22,10 +22,13 @@
 <br />
 <div class="actions">
     <br />
-    <a class="btn btn-warning" href="#">Cleaned Kitchen</a>
-    <a class="btn btn-warning" href="#">Cleaned Bathroom</a>
-    <a class="btn btn-warning" href="#">Cleaned Living Room</a>
+    <a class="btn btn-primary" href="#">Cleaned Kitchen</a>
+    <a class="btn btn-primary" href="#">Cleaned Bathroom</a>
+    <a class="btn btn-primary" href="#">Cleaned Living Room</a>
     <br />
+    <br />
+    <br />
+    Check out what everyone else has done 
     <br />
     <br />
     <%= link_to 'List of completed tasks', tasks_path, class: "btn btn-success" %>
