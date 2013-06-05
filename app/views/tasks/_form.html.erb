@@ -12,10 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :taskcomplete %><br />
+    <h4>Enter the Task you just completed</h4>
     <%= f.text_field :taskcomplete %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
+
+
+<% end %>
+
+
+  <% if user_signed_in? %>
+    <p>You are currently signed in..</p>
+    <%= link_to :logout,  destroy_user_session_path, class: 'btn btn-danger', method: :delete %>
+  <% else %>
+    <br />
+    <br />
+ <small>It's important to create an account because that is how you are able to communicate with us. You can't easily create an account by clicking "New user" above.</small>
 <% end %>

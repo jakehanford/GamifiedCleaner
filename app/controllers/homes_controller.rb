@@ -3,16 +3,21 @@ class HomesController < ApplicationController
   # GET /homes.json
   def index
 
+      if user_signed_in? 
+      redirect_to new_task_path
+    
+    else
+      @homes = Home.all
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @homes }
     end
   end
+  end
 
   # GET /homes/1
   # GET /homes/1.json
   def show
-    @homes = Home.all
     @home = Home.find(params[:id])
 
     respond_to do |format|

@@ -10,16 +10,12 @@
 	<br />
 	<br />
 	<br />
-	<br />
-	<br />
-	<br />
 	<% if user_signed_in? %>
 		<p>You are currently signed in..</p>
-		<a class="btn btn-danger" href="/users/sign_out">Log out</a>
+		  <%= link_to :logout,  destroy_user_session_path, class: 'button btn-danger', method: :delete %>
 	<% else %>
 		<br />
-		<br />
- <small>It's important to create an account because that is how you are able to communicate with us. You can't easily create an account by clicking "New Patient" above.</small>
+ <small>To be able to user this application you need an account, that way the things you have cleaned can be recorded ;)</small>
 <% end %>
 
 </div>
