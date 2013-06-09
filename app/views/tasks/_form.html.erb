@@ -17,21 +17,29 @@
 
   <div class="field">
 
-    <%= f.text_field :taskcomplete, :placeholder => "What have you cleaned?" %><%= f.submit class: "btn btn-success" %>
+    <%= f.text_field :taskcomplete, :placeholder => "Enter what you just did!" %>
+    <br />
+    <br />
+    <%= f.text_field :name, :placeholder => "What's your name?" %>
+    <br />
+    <br /><%= f.submit 'Submit!', class: "btn btn-success" %>
   </div>
+
 <br />
 <div class="actions">
     <br />
+    <!--
     <a class="btn btn-primary" href="#">Cleaned Kitchen</a>
     <a class="btn btn-primary" href="#">Cleaned Bathroom</a>
     <a class="btn btn-primary" href="#">Cleaned Living Room</a>
     <br />
     <br />
     <br />
+  -->
     Check out what everyone else has done 
     <br />
     <br />
-    <%= link_to 'List of completed tasks', tasks_path, class: "btn btn-info" %>
+    <%= link_to 'List of completed tasks', tasks_path, class: "btn btn-inverse" %>
   </div>
 <% end %>
 <br />
