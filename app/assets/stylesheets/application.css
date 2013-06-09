@@ -1099,12 +1099,18 @@ h6 {
   padding: 0;
   height: 2px;
 }
+
+.span3 {
+width: 220px;
+}
 .select {
   display: inline-block;
   margin-bottom: 10px;
 }
 [class*="span"] > .select[class*="span"] {
-  margin-left: 0;
+float: left;
+min-height: 1px;
+margin-left: 20px;
 }
 .select[class*="span"] .btn {
   width: 100%;
@@ -2845,11 +2851,11 @@ textarea[class*="span"] {
   margin-top: -5px;
 }
 .tile {
-  background-color: #eff0f2;
-  border-radius: 6px;
-  padding: 14px;
-  position: relative;
-  text-align: center;
+background-color: #34495e;
+border-radius: 6px;
+padding: 14px;
+position: relative;
+text-align: center;
 }
 .tile.tile-hot:before {
   background: url(../images/tile/ribbon.png) 0 0 no-repeat;

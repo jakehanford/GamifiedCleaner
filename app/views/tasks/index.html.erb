@@ -2,15 +2,24 @@
 <h1>Tasks completed today</h1>
 
 <% @tasks.each do |task| %>
-  <div clas="container">
-    <%= task.id %>. 
-    <big><%= task.taskcomplete %></big>
+<!--<div class="container">-->
+  	<div class="row demo-tiles">
+  		<div class="span3">
+  			<div class="tile">
+  				<img src="icons/Clipboard@2x.png" alt="Compas@2x" class="tile-image big-illustration">
+    <h3 class="tile-title"><%= task.taskcomplete %></h3> 
+    <p>This was the <%= task.id %> thing completed today!</p>
+    <%= link_to 'Show', task, class: 'btn btn-primary btn-block' %>
+
+	</div>
+</div>
+<br />
+<br />
 
     <!--<%= link_to 'Show', task %> -->
     <!--<%= link_to 'Edit', edit_task_path(task) %>-->
     <!--<%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>-->
 
-</div>
 <% end %>
 
 
