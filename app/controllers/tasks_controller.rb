@@ -4,6 +4,7 @@ class TasksController < ApplicationController
     before_filter :authenticate_user!
   def index
     @tasks = Task.all
+    @task = Task.new
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,7 +26,7 @@ class TasksController < ApplicationController
   # GET /tasks/new
   # GET /tasks/new.json
   def new
-    @task = Task.new
+  @task = Task.new
 
     respond_to do |format|
       format.html # new.html.erb

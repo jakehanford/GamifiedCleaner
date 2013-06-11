@@ -1,20 +1,34 @@
 <body bgcolor="#2980b9">
 	<div class="sixteen columns">
 			<h1 class="remove-bottom" style="margin-top: 40px">Tasks completed today</h1>
-				<h5>The first attempt at keeping the house clean.</h5>
-			<hr>
-	
+<%= form_for(@task) do |f| %>
+<p>Below you can share how you have helped</p>
+<%= f.text_field :taskcomplete, :placeholder => "How have you helped?" %>
+ <br /><%= f.submit 'Submit!', class: "btn btn-success" %>
+
+<% end -%>
+<hr>
+<br />
+
 <div class="container">
-		<div clas="row demo-samples">
 <% @tasks.each do |task| %>
+	<div class="asd">
+		<h2><%= task.taskcomplete %></h2> 
+    <p>We have completed <%= task.id %> tasks!</p>
+	</div>
 
-	<div class="one-third column">
 
-  	<!--<div class="row demo-tiles">-->
+
+
+
+
+
+	<!--<div class="one-third column">
+
   		<div class="span3">
   			<div class="tile">
   				<img src="icons/Clipboard@2x.png" alt="Compas@2x" class="tile-image big-illustration">
-    <h3 class="tile-title"><%= task.taskcomplete %></h3> 
+    <h4 class="tile-title"><%= task.taskcomplete %></h4> 
     <p><small>We have completed <%= task.id %> tasks!</small></p>
 
 
@@ -22,7 +36,7 @@
 
 			</div>
 		</div>
-	</div>
+	</div>-->
 
     <!--<%= link_to 'Show', task %> -->
     <!--<%= link_to 'Edit', edit_task_path(task) %>-->
