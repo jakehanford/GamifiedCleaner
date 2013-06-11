@@ -1,25 +1,17 @@
 <body bgcolor="#2980b9">
 	<br />
-	<br />
 	<h1>Gamified Cleaning</h1>
-	<h6>To begin you'll need an account</h6>
-	</br>
-	<a class="btn btn-inverse btn-large" href="/users/sign_up">Sign up</a>
+	<h4>To begin you'll need an account</h4>
+	<a class="btn btn-inverse" href="/users/sign_up">Sign up</a>
 
-	<a class="btn btn-inverse btn-large" href="/users/sign_in">Sign in</a>
+	<a class="btn btn-inverse" href="/users/sign_in">Sign in</a>
 	<br />
-	<br />
-	<br />
-
-
-
-
 	<% if user_signed_in? %>
 		<p>You are currently signed in..</p>
 		  <%= link_to :logout,  destroy_user_session_path, class: 'button btn-danger', method: :delete %>
 	<% else %>
 		<br />
- <small>To be able to use this application you need an account, that way the things you have cleaned can be recorded ;)</small>
+ <small>This application is competely broken, I am undecided what I am going to do with it :/</small>
 <% end %>
 
 </div>

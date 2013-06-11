@@ -4,7 +4,7 @@
 <%= form_for(@task) do |f| %>
 <p>Below you can share how you have helped</p>
 <%= f.text_field :taskcomplete, :placeholder => "How have you helped?" %>
- <br /><%= f.submit 'Submit!', class: "btn btn-success" %>
+<%= f.submit 'Submit!', class: "btn btn-success" %>
 
 <% end -%>
 <hr>
@@ -16,13 +16,6 @@
 		<h2><%= task.taskcomplete %></h2> 
     <p>We have completed <%= task.id %> tasks!</p>
 	</div>
-
-
-
-
-
-
-
 	<!--<div class="one-third column">
 
   		<div class="span3">
@@ -41,7 +34,6 @@
     <!--<%= link_to 'Show', task %> -->
     <!--<%= link_to 'Edit', edit_task_path(task) %>-->
     <!--<%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>-->
-
 <% end %>
 
 </div>

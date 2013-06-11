@@ -4,7 +4,7 @@ class HomesController < ApplicationController
   def index
 
       if user_signed_in? 
-      redirect_to new_task_path
+      redirect_to tasks_path
     
     else
       @homes = Home.all
