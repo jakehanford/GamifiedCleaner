@@ -1,10 +1,12 @@
-<body bgcolor="#2980b9">
+<body>
 	<div class="sixteen columns">
+    <div class="hero-unit">
 			<h1 class="remove-bottom" style="margin-top: 40px">Tasks completed today</h1>
 <%= form_for(@task) do |f| %>
 <p>Below you can share how you have helped</p>
 <%= f.text_field :taskcomplete, :placeholder => "How have you helped?" %>
 <%= f.submit 'Submit!', class: "btn btn-success" %>
+</div>
 
 <% end -%>
 <hr>
