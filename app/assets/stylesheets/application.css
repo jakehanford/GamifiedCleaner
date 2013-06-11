@@ -52,6 +52,12 @@
 .hero-unit p {
   color: #34495e;
 }
+.hero-unit h4 {
+  color: #34495e;
+}
+.hero-unit h2 {
+  color: #34495e;
+}
 #alert {
     position: relative;
 }

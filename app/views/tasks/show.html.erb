@@ -1,17 +1,19 @@
-<body bgcolor="#2980b9">
+<div class="hero-unit">
 <h2 id="notice"><%= notice %></h2>
 
-<p>
-  <h4>Thank you so much, The house loves you!</h4>
+  <h1>Thank you so much, The house loves you!</h1>
   <br />
-  <small>You submitted: "<%= @task.taskcomplete %>"</small>
+  <p>You submitted: "<%= @task.taskcomplete %>"</p>
   <br />
-  <small>Time submitted: <%= @task.created_at %></small>
+  <p>Time submitted: <%= @task.created_at %></p>
 </p>
+</div>
+<hr>
 <br />
 
 
 <!--<%= link_to 'Edit', edit_task_path(@task), class: 'btn btn-primary' %> -->
 <br />
 <br />
-<%= link_to 'Home', tasks_path, class: 'btn btn-large btn-inverse' %>
+<%= link_to 'Home', tasks_path, class: 'btn btn-inverse' %>
+<%= link_to :logout,  destroy_user_session_path, class: 'btn btn-danger', method: :delete %>
